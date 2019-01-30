@@ -1,0 +1,37 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.bg-wiki-blue {
+  background-color: #E5EAFD;
+}
+.wiki-text-blue {
+  color: #23285B;
+}
+.open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+.dosis {
+  font-family: 'Dosis', sans-serif;
+}
+.quicksand {
+  font-family: 'Quicksand', sans-serif;
+}
+.bg-wiki-btn-blue {
+  background-color: #5B76F5;
+}
+.wiki-btn-blue {
+  color: #5B76F5;
+}
+input[type='radio'] { transform: scale(1); }
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}

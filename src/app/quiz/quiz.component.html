@@ -1,0 +1,47 @@
+<div class="bg-wiki-blue">
+  <header class="bg-wiki-blue w-100 ph3 pv3 pv4-ns ph4-m ph5-l quicksand">
+    <nav class="f6 fw6 tracked">
+      <img src="../../assets/pi.png" class="w4 h3 ml2 pl2"/>
+      <div class="fr">
+        <a class="link dim wiki-text-blue mr3 pointer" title="Contact">Contact</a>
+        <button class="grow bg-wiki-btn-blue white pa3 br2 mr3 pointer" title="Info">How does it work?</button>
+      </div>
+    </nav>
+  </header>
+  <div class="hello center tl f2 wiki-text-blue open-sans pt6 pl5 b">
+      Let's get you on the right track
+  </div>
+  <div class="pt5 open-sans wiki-text-blue center tl pl5">
+    <div class="f4 left pb3">How much of your net income are you free to invest?</div>
+    <mat-radio-group class="example-radio-group tl" [(ngModel)]="moneyPicked">
+      <mat-radio-button
+        class="example-radio-button"
+        *ngFor="let radioOptn of moneyRadioOptions"
+        [value]="radioOptn.value"
+        color="primary">
+        {{ radioOptn.text }}
+      </mat-radio-button>
+    </mat-radio-group>
+    <div class="f4 left pb3 pt4">How many hours per week can you commit?</div>
+    <mat-radio-group class="example-radio-group tl" [(ngModel)]="timePicked">
+      <mat-radio-button
+        class="example-radio-button"
+        *ngFor="let radioOptn of timeRadioOptions"
+        [value]="radioOptn.value"
+        color="primary">
+        {{ radioOptn.text }}
+      </mat-radio-button>
+    </mat-radio-group>
+    <div class="f4 left pb3 pt4">How much risk are you willing to tolerate?</div>
+    <mat-radio-group class="example-radio-group tl" [(ngModel)]="riskPicked">
+      <mat-radio-button
+        class="example-radio-button"
+        *ngFor="let radioOptn of riskRadioOptions"
+        [value]="radioOptn.value"
+        color="primary">
+        {{ radioOptn.text }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <button class="ml5 grow bg-wiki-btn-blue white pa3 ph4 mt4 br2 pointer mb3">Go</button>
+</div>
