@@ -7,12 +7,18 @@ import { MatRadioModule } from '@angular/material/radio';
 
 import { AppComponent } from './app.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { FooterComponent } from './footer/footer.component';
+import { InfoModalComponent } from './info-modal/info-modal.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuizComponent
+    QuizComponent,
+    FooterComponent,
+    InfoModalComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<div name="modal">
+  <div class="modal-mask catamaran" (click)="configObj.onClose()">
+    <div class="modal-container">
+      <div [ngClass]="configObj.theme" class="white">
+        <h3 class="f3 pa3 tc">{{ configObj.title }}</h3>
+      </div>
+      <div class="ph3 pb3 lh-copy" [ngClass]="configObj.messageClass">
+        {{ configObj.message }}
+      </div>
+      <div class="pa3 tc">
+        <button class="bg-wiki-btn-blue pv2 ph3 white br3 f4 hover-pointer" (click)="configObj.onClose()">
+          Got it
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

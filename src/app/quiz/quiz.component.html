@@ -1,14 +1,5 @@
 <div class="bg-wiki-blue">
-  <header class="bg-wiki-blue w-100 ph3 pv3 pv4-ns ph4-m ph5-l quicksand">
-    <nav class="f6 fw6 tracked">
-      <img src="../../assets/pi.png" class="w4 h3 ml2 pl2"/>
-      <div class="fr">
-        <a class="link dim wiki-text-blue mr3 pointer" title="Contact">Contact</a>
-        <button class="grow bg-wiki-btn-blue white pa3 br2 mr3 pointer" title="Info">How does it work?</button>
-      </div>
-    </nav>
-  </header>
-  <div class="hello center tl f2 wiki-text-blue open-sans pt6 pl5 b">
+  <div class="hello center tl f2 wiki-text-blue open-sans pt6 pl5">
       Let's get you on the right track
   </div>
   <div class="pt5 open-sans wiki-text-blue center tl pl5">
@@ -43,5 +34,9 @@
       </mat-radio-button>
     </mat-radio-group>
   </div>
-  <button class="ml5 grow bg-wiki-btn-blue white pa3 ph4 mt4 br2 pointer mb3">Go</button>
+  <button
+    class="ml5 grow bg-wiki-btn-blue white pa3 ph4 mt4 br2 pointer mb5"
+    (click)="onQuizComplete()">
+    Go
+  </button>
 </div>

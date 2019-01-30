@@ -19,6 +19,10 @@ export class QuizComponent implements OnInit {
   riskRadioOptions = riskRadioOptions
   riskPicked = ''
 
+  onQuizComplete() {
+    
+  }
+
   constructor() { }
 
   ngOnInit() {

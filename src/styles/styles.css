@@ -35,3 +35,12 @@ input[type='radio'] { transform: scale(1); }
 .example-selected-value {
   margin: 15px 0;
 }
+.w3-5 {
+  width: 6rem;
+}
+.h2-5 {
+  height: 3rem;
+}
+.bg-footer-color {
+  background-color: #232323;
+}
