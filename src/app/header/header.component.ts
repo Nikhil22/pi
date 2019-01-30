@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { getDefaultInfoConfigObj, InfoModal } from '../../types/info-modal';
+import { getDefaultNavConfigObj, NavModal } from '../../types/nav-modal';
 import { infoModalMessage } from '../../data/info-modal'
 
 @Component({
@@ -11,13 +12,30 @@ export class HeaderComponent implements OnInit {
   infoModalConfigObj: InfoModal = getDefaultInfoConfigObj();
   showInfoModal = false
 
+  navModalConfigObj: NavModal = getDefaultNavConfigObj();
+  showNavModal = false
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onHamburgerClick() {
+    const self = this
+    this.navModalConfigObj = {
+      onAbout: () => {
+        self.showNavModal = false
+        self.onInfoClick()
+      },
+      onClose: () => {
+        self.showNavModal = false
+      }
+    }
+    this.showNavModal = true
+  }
+
+
   onInfoClick() {
-    console.log("clciked")
     const self = this
     this.infoModalConfigObj = {
       title: 'PI',

@@ -10,6 +10,9 @@ import { QuizComponent } from './quiz/quiz.component';
 import { FooterComponent } from './footer/footer.component';
 import { InfoModalComponent } from './info-modal/info-modal.component';
 import { HeaderComponent } from './header/header.component';
+import { AppRoutingModule } from './app-routing.module';
+import { EmailComponent } from './email/email.component';
+import { NavModalComponent } from './nav-modal/nav-modal.component';
 
 
 @NgModule({
@@ -18,13 +21,16 @@ import { HeaderComponent } from './header/header.component';
     QuizComponent,
     FooterComponent,
     InfoModalComponent,
-    HeaderComponent
+    HeaderComponent,
+    EmailComponent,
+    NavModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatRadioModule
+    MatRadioModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <header class="bg-wiki-blue w-100 ph3 pv3 pv4-ns ph4-m ph5-l quicksand">
   <nav class="f6 fw6 tracked">
     <img src="../../assets/pi.png" class="w3-5 h2-5 ml2 pl2"/>
-    <div class="fr">
+    <div class="fr dn-m dn db-l">
       <a class="link dim wiki-text-blue mr3 pointer" href="#footer" title="Contact">Contact</a>
       <button
         class="grow bg-wiki-btn-blue white pa3 br2 mr3 pointer"
@@ -9,6 +9,11 @@
         How does it work?
       </button>
     </div>
+    <div
+      class="dn-l f3 pointer pt3 wiki-btn-blue fr" (click)="onHamburgerClick()">
+      &#9776;
+    </div>
+    <app-nav-modal [hidden]="!showNavModal" [configObj]="navModalConfigObj"></app-nav-modal>
   </nav>
   <app-info-modal [hidden]="!showInfoModal" [configObj]="infoModalConfigObj"></app-info-modal>
 </header>

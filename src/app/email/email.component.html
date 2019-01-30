@@ -1,0 +1,22 @@
+<div class="vh-100 pa4 tc open-sans">
+  <div
+    class="f3 pv4 bg-white black-70 br3 pl4 open-sans"
+    >
+  One last step to get your FREE passive income guide
+  </div>
+  <div class="mt3 ph3 pa0-l">
+    <input
+      class="pa3 input-reset ba b--black-30 br2 bg-white-smoke w-50-ns w-100"
+      type="email"
+      name="email-address"
+      placeholder="Email..."
+      (input)="onEmailChange()"
+      [(ngModel)]="email">
+  </div>
+  <button
+    class="grow bg-wiki-btn-blue white pa3 ph4 mt4 br2 mb5"
+    (click)="onEmailEnter()"
+    [ngClass]="{'email-btn-disabled' : !isEmailValid, 'pointer grow' : isEmailValid}">
+    Get my FREE guide
+  </button>
+</div>

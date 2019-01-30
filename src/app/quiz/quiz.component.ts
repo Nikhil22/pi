@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import {
   moneyRadioOptions,
   timeRadioOptions,
@@ -18,12 +20,40 @@ export class QuizComponent implements OnInit {
   timePicked = ''
   riskRadioOptions = riskRadioOptions
   riskPicked = ''
+  areInputsValid = false
 
-  onQuizComplete() {
-    
+  onMoneyChange(money) {
+    this.moneyPicked = money
+    this.areInputsValid = !!(
+      this.moneyPicked
+      && this.timePicked
+      && this.riskPicked
+    )
   }
 
-  constructor() { }
+  onRiskChange(risk) {
+    this.riskPicked = risk
+    this.areInputsValid = !!(
+      this.moneyPicked
+      && this.timePicked
+      && this.riskPicked
+    )
+  }
+
+  onTimeChange(time) {
+    this.timePicked = time
+    this.areInputsValid = !!(
+      this.moneyPicked
+      && this.timePicked
+      && this.riskPicked
+    )
+  }
+
+  onQuizComplete() {
+    this.router.navigateByUrl('/email');
+  }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
